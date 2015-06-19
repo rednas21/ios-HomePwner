@@ -39,9 +39,14 @@
 
 #pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [[[ItemStore sharedStore] allItems] count];
+    return [[[ItemStore sharedStore] allItems] count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,11 +55,25 @@
     
     // Configure the cell...
     NSArray *items = [[ItemStore sharedStore] allItems];
-    Item *item = items[indexPath.row];
     
-    cell.textLabel.text = [item description];
+    if (indexPath.row < [items count]) {
+        Item *item = items[indexPath.row];
+        cell.textLabel.text = [item description];
+        cell.textLabel.font = [UIFont systemFontOfSize:20.0];
+    } else {
+        cell.textLabel.text = @"No more items!";
+    }
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row < [[[ItemStore sharedStore] allItems] count]) {
+        return 60;
+    } else {
+        return 44;
+    }
 }
 
 /*
