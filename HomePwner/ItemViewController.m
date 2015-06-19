@@ -7,6 +7,8 @@
 //
 
 #import "ItemViewController.h"
+#import "ItemStore.h"
+#import "Item.h"
 
 @interface ItemViewController ()
 
@@ -16,6 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    for (int i = 0; i < 5; i++) {
+        [[ItemStore sharedStore] createItem];
+    }
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,41 +37,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (instancetype)init
-{
-    // Call the superclass's designated initializer
-    self = [super initWithStyle:UITableViewStylePlain];
-    return self;
-}
-
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    return [self init];
-}
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[ItemStore sharedStore] allItems] count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                                            forIndexPath:indexPath];
     
     // Configure the cell...
+    NSArray *items = [[ItemStore sharedStore] allItems];
+    Item *item = items[indexPath.row];
+    
+    cell.textLabel.text = [item description];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -14,6 +14,8 @@
 		EA97E90E1B34B46B0010F924 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA97E90C1B34B46B0010F924 /* LaunchScreen.xib */; };
 		EA97E91A1B34B46B0010F924 /* HomePwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E9191B34B46B0010F924 /* HomePwnerTests.m */; };
 		EA97E9251B34B4F30010F924 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E9241B34B4F30010F924 /* ItemViewController.m */; };
+		EA97E9281B34B5C00010F924 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E9271B34B5C00010F924 /* Item.m */; };
+		EA97E92B1B34B5D10010F924 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E92A1B34B5D10010F924 /* ItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		EA97E9191B34B46B0010F924 /* HomePwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePwnerTests.m; sourceTree = "<group>"; };
 		EA97E9231B34B4F30010F924 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		EA97E9241B34B4F30010F924 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		EA97E9261B34B5C00010F924 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		EA97E9271B34B5C00010F924 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		EA97E9291B34B5D10010F924 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
+		EA97E92A1B34B5D10010F924 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 			children = (
 				EA97E9011B34B46B0010F924 /* AppDelegate.h */,
 				EA97E9021B34B46B0010F924 /* AppDelegate.m */,
+				EA97E9261B34B5C00010F924 /* Item.h */,
+				EA97E9271B34B5C00010F924 /* Item.m */,
+				EA97E9291B34B5D10010F924 /* ItemStore.h */,
+				EA97E92A1B34B5D10010F924 /* ItemStore.m */,
 				EA97E9231B34B4F30010F924 /* ItemViewController.h */,
 				EA97E9241B34B4F30010F924 /* ItemViewController.m */,
 				EA97E9071B34B46B0010F924 /* Main.storyboard */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA97E9281B34B5C00010F924 /* Item.m in Sources */,
 				EA97E9031B34B46B0010F924 /* AppDelegate.m in Sources */,
 				EA97E9251B34B4F30010F924 /* ItemViewController.m in Sources */,
 				EA97E9001B34B46B0010F924 /* main.m in Sources */,
+				EA97E92B1B34B5D10010F924 /* ItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
