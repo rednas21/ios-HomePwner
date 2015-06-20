@@ -55,4 +55,19 @@
     return item;
 }
 
+- (void)removeItem:(Item *)item
+{
+    [self.privateItems removeObjectIdenticalTo:item];
+}
+
+- (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
+{
+    if (fromIndex == toIndex) return;
+    
+    Item *fromItem = self.privateItems[fromIndex];
+    
+    [self.privateItems removeObjectAtIndex:toIndex];
+    [self.privateItems insertObject:fromItem atIndex:toIndex];
+}
+
 @end
