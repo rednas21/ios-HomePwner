@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA4E2D231B38A48900758324 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E2D221B38A48900758324 /* DetailViewController.m */; };
 		EA97E9001B34B46B0010F924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E8FF1B34B46B0010F924 /* main.m */; };
 		EA97E9031B34B46B0010F924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E9021B34B46B0010F924 /* AppDelegate.m */; };
 		EA97E9091B34B46B0010F924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA97E9071B34B46B0010F924 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA4E2D211B38A48900758324 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EA4E2D221B38A48900758324 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EA97E8FA1B34B46B0010F924 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA97E8FE1B34B46B0010F924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA97E8FF1B34B46B0010F924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 			children = (
 				EA97E9011B34B46B0010F924 /* AppDelegate.h */,
 				EA97E9021B34B46B0010F924 /* AppDelegate.m */,
+				EA4E2D211B38A48900758324 /* DetailViewController.h */,
+				EA4E2D221B38A48900758324 /* DetailViewController.m */,
 				EA97E9261B34B5C00010F924 /* Item.h */,
 				EA97E9271B34B5C00010F924 /* Item.m */,
 				EA97E9291B34B5D10010F924 /* ItemStore.h */,
@@ -234,6 +239,7 @@
 				EA97E9251B34B4F30010F924 /* ItemViewController.m in Sources */,
 				EA97E9001B34B46B0010F924 /* main.m in Sources */,
 				EA97E92B1B34B5D10010F924 /* ItemStore.m in Sources */,
+				EA4E2D231B38A48900758324 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +436,7 @@
 				EA97E91F1B34B46B0010F924 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA97E9201B34B46B0010F924 /* Build configuration list for PBXNativeTarget "HomePwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +445,7 @@
 				EA97E9221B34B46B0010F924 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

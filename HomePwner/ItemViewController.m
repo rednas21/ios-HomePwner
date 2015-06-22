@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Sander Peerna. All rights reserved.
 //
 
+#import "DetailViewController.h"
 #import "ItemViewController.h"
 #import "ItemStore.h"
 #import "Item.h"
@@ -20,6 +21,9 @@
 {
     [super viewDidLoad];
     
+    UINavigationItem *navItem = self.navigationItem;
+    navItem.title = @"HomePwner";
+    
     for (int i = 0; i < 5; i++) {
         [[ItemStore sharedStore] createItem];
     }
@@ -31,6 +35,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -162,14 +173,26 @@
         return proposedDestinationIndexPath;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"AddItem"]) {
+        Item *newItem = [[Item alloc] init];
+        UINavigationController *nc = (UINavigationController *)segue.destinationViewController;
+        DetailViewController *dvc = (DetailViewController *)[nc topViewController];
+        dvc.item = newItem;
+        [[ItemStore sharedStore] addItem:newItem];
+    } else if ([segue.identifier isEqualToString:@"EditItem"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        NSArray *items = [[ItemStore sharedStore] allItems];
+        Item *editItem = items[indexPath.row];
+        DetailViewController *cvc = (DetailViewController *)segue.destinationViewController;
+        cvc.item = editItem;
+    }
 }
-*/
 
 @end

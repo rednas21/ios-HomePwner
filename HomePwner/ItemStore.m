@@ -55,6 +55,11 @@
     return item;
 }
 
+- (void)addItem:(Item *)item
+{
+    [self.privateItems addObject:item];
+}
+
 - (void)removeItem:(Item *)item
 {
     [self.privateItems removeObjectIdenticalTo:item];
