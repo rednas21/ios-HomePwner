@@ -8,6 +8,7 @@
 
 #import "ItemStore.h"
 #import "Item.h"
+#import "ImageStore.h"
 
 @interface ItemStore ()
 
@@ -21,7 +22,6 @@
 {
     static ItemStore *sharedStore = nil;
     
-    // Do I need to create a sharedStore?
     if (!sharedStore) {
         sharedStore = [[self alloc] initPrivate];
     }
@@ -62,6 +62,10 @@
 
 - (void)removeItem:(Item *)item
 {
+    NSString *key = item.itemKey;
+    
+    [[ImageStore sharedStore] deleteImageForKey:key];
+    
     [self.privateItems removeObjectIdenticalTo:item];
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA25C28D1B48C77400B71A10 /* ImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EA25C28C1B48C77400B71A10 /* ImageStore.m */; };
 		EA4E2D231B38A48900758324 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E2D221B38A48900758324 /* DetailViewController.m */; };
 		EA97E9001B34B46B0010F924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E8FF1B34B46B0010F924 /* main.m */; };
 		EA97E9031B34B46B0010F924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97E9021B34B46B0010F924 /* AppDelegate.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA25C28B1B48C77400B71A10 /* ImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStore.h; sourceTree = "<group>"; };
+		EA25C28C1B48C77400B71A10 /* ImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStore.m; sourceTree = "<group>"; };
 		EA4E2D211B38A48900758324 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		EA4E2D221B38A48900758324 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EA97E8FA1B34B46B0010F924 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +97,8 @@
 				EA97E9021B34B46B0010F924 /* AppDelegate.m */,
 				EA4E2D211B38A48900758324 /* DetailViewController.h */,
 				EA4E2D221B38A48900758324 /* DetailViewController.m */,
+				EA25C28B1B48C77400B71A10 /* ImageStore.h */,
+				EA25C28C1B48C77400B71A10 /* ImageStore.m */,
 				EA97E9261B34B5C00010F924 /* Item.h */,
 				EA97E9271B34B5C00010F924 /* Item.m */,
 				EA97E9291B34B5D10010F924 /* ItemStore.h */,
@@ -236,6 +241,7 @@
 			files = (
 				EA97E9281B34B5C00010F924 /* Item.m in Sources */,
 				EA97E9031B34B46B0010F924 /* AppDelegate.m in Sources */,
+				EA25C28D1B48C77400B71A10 /* ImageStore.m in Sources */,
 				EA97E9251B34B4F30010F924 /* ItemViewController.m in Sources */,
 				EA97E9001B34B46B0010F924 /* main.m in Sources */,
 				EA97E92B1B34B5D10010F924 /* ItemStore.m in Sources */,
